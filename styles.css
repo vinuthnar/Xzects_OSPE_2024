@@ -1,0 +1,665 @@
+/* Styles for the screen-toggle container */
+.screen-toggle {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    padding: 20px; /* Add padding around the container */
+    margin: 20px auto; /* Add margin to separate it from other elements */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limit the maximum width */
+}
+
+/* Styles for the buttons */
+.screen-toggle button {
+    background-color: #fff; /* White background for the buttons */
+    color: #333; /* Dark text color for readability */
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Add padding inside the buttons */
+    margin: 0 5px; /* Add margin between the buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.screen-toggle button:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .screen-toggle {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .screen-toggle button {
+        padding: 8px 10px; /* Reduce padding inside the buttons */
+    }
+}
+
+
+/* Simulate tablet view */
+.tablet-view {
+    width: 768px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Simulate mobile view */
+.mobile-view {
+    width: 375px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Make sure body width stays normal for desktop view */
+.desktop-view {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    padding: 10px 0;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav {
+    position: relative;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #007bff; /* Underline color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+.menu a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Styles for Recent Posts Section */
+.recent-posts {
+    padding: 40px 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.recent-posts h2 {
+    font-size: 24px; /* Larger font size for the heading */
+    color: #333; /* Dark text color for readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.recent-posts h2 strong {
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Styles for Portfolio Section */
+.portfolio {
+    padding: 40px 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.portfolio h2 {
+    font-size: 24px; /* Larger font size for the heading */
+    color: #333; /* Dark text color for readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.portfolio h2 strong {
+    font-weight: bold; /* Make the text bold */
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show on small screens */
+    }
+    .menu {
+        display: none; /* Hide on small screens */
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu.active {
+        display: flex; /* Show when toggled */
+    }
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.intro h1 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: auto;
+    line-height: 65px;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 1rem;
+    max-width: 800px;
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: auto;
+    line-height: 35px;
+}
+
+h2 {
+    padding-left: 2rem;
+    margin-left: 100px;
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Increased gap for more spacing */
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+}
+
+.image-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow frame */
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    padding-bottom: 100%; /* Maintain square aspect ratio */
+    width: 90%; /* Reduce image size */
+    height: auto;
+    margin: 0 auto; /* Center the images */
+}
+
+.image-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Styles for Recent Posts Section */
+.recent-posts {
+    padding: 40px 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.recent-posts h2 {
+    font-size: 24px; /* Larger font size for the heading */
+    color: #333; /* Dark text color for readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.recent-posts h2 strong {
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .recent-posts, .portfolio {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .recent-posts h2, .portfolio h2 {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+}
+
+.posts {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px; /* Added padding for the section */
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px; /* Increased card width */
+    height: 400px; /* Increased card height */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.post .container {
+    padding: 20px;
+}
+
+.post h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.post p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+}
+
+.container {
+    padding: 1rem;
+    height: 150px; /* Fixed height for the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Styles for the subscribe section */
+.subscribe {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Background color to match the SVG */
+    position: relative; /* To position the SVG correctly */
+    overflow: hidden; /* To handle overflow of SVG */
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.subscribe-head {
+    margin-bottom: 20px;
+}
+
+.subscribe-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.subscribe-inner {
+    margin-top: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-email {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.subscribe-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #555;
+}
+
+.subscribe-bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .subscribe {
+        padding: 20px;
+    }
+
+    .subscribe-title {
+        font-size: 20px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subscribe-email {
+        max-width: 100%;
+    }
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between items as needed */
+    padding: 60px;
+    margin: auto;
+    margin-bottom: -30px;
+}
+
+.social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.social-link i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.social-link:hover {
+    color: #6200EE;
+}
+
+.footer {
+    color: #141414;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer .social {
+    margin-bottom: 20px;
+}
+
+.footer .social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .social-item {
+    display: inline-block;
+}
+
+.footer .social-link {
+    color: #232222;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer .social-link:hover {
+    color: #ddd;
+}
+
+.footer .footer-info {
+    font-size: 14px;
+}
+
+.footer .footer-info a {
+    color: #252525;
+    transition: color 0.3s;
+}
+
+.footer .footer-info a:hover {
+    color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    .image-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    header {
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav.menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle.active + nav.menu {
+        display: flex;
+    }
+
+    .image-card {
+        flex: 1 1 100%;
+    }
+}
